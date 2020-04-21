@@ -3,6 +3,8 @@ from enum import Enum
 
 
 class Pollutant(Enum):
+    """List of pollutants"""
+
     PM10 = 0
     PM25 = 1
     SO2 = 2

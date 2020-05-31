@@ -1,2 +1,9 @@
-# Enviroment
+# Windows
+desktop.ini
+
+# Env
 .vscode
+
+# Cache
+**.egg-info/
+__pycache__/

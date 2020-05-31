@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+"""Base class for inheriting functions for Air Quality Index
+"""
 from .Pollutant import Pollutant
 from decimal import Decimal
 

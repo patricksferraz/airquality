@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+"""standards established by CONAMA Resolution No. 491/2018
+"""
 from .Pollutant import Pollutant
 from decimal import Decimal
 from .AQI import AQI
@@ -7,6 +10,15 @@ import math
 class Conama(AQI):
     """Class containing air quality standards established by CONAMA Resolution
     No. 491/2018
+
+    >>> Conama.list_pollutants()
+    ['Pollutant.PM10', 'Pollutant.PM25', 'Pollutant.SO2', 'Pollutant.NO2', 'Pollutant.CO', 'Pollutant.O3']
+    >>> Conama.get_aqi(c=40, elem=Pollutant.PM10)
+    {'good': Decimal('50.00')}
+    >>> Conama.get_aqi(c=120.5, elem=Pollutant.PM10)
+    {'inadequate': Decimal('101.3017705927636643571978445')}
+    >>> Conama.get_aqi(c=1620.5, elem=Pollutant.SO2)
+    {'terrible': Decimal('304.0400080016003200640128026')}
 
     Attributes
     -------
